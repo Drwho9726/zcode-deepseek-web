@@ -74,7 +74,7 @@ Create a key at <https://platform.deepseek.com/api_keys>.
 ## Open source and publishing
 
 - Publishable unit: this `deepseek-web/` plugin directory; include the parent `marketplace.json` only if you want others to add the local marketplace directly.
-- **Do not publish the whole workspace**: `_inspect/`, `spike/`, logs, screenshots, and local settings are not part of the plugin and may contain personal data.
+- **Do not publish the whole workspace**: internal inspection artifacts, browser profiles, logs, screenshots, and local settings are not part of the plugin and may contain personal data.
 - No npm dependencies; Node 18+ is the only runtime requirement. ZCode loads the plugin through `.zcode-plugin/plugin.json`, `.mcp.json`, and `hooks/hooks.json`.
 - Author: [Drwho9726](https://github.com/Drwho9726).
 - This project is not affiliated with DeepSeek. DeepSeek is a trademark of its owner.

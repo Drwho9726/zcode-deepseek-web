@@ -113,7 +113,7 @@ Key 在 <https://platform.deepseek.com/api_keys> 创建。
 ## 开源与发布
 
 - 可发布的目录：本插件目录 `deepseek-web/`；如果希望别人直接添加本地市场，再附带上一级的 `marketplace.json`。
-- **不要直接公开整个工作区**：`_inspect/`、`spike/`、日志、截图和本机配置不属于插件，可能包含个人信息。
+- **不要直接公开整个工作区**：内部检查产物、浏览器 profile、日志、截图和本机配置不属于插件，可能包含个人信息。
 - 无 npm 依赖，运行时只需要 Node 18+；ZCode 插件通过 `.zcode-plugin/plugin.json`、`.mcp.json` 和 `hooks/hooks.json` 加载。
 - 作者：[Drwho9726](https://github.com/Drwho9726)。
 - 本项目与 DeepSeek 官方无隶属关系；DeepSeek 是其权利人的商标。
