@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "deepseek_web": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/server/mcp-server.mjs"
+      ],
+      "env": {
+        "DEEPSEEK_WEB_API_KEY": "${user_config.api_key}",
+        "DEEPSEEK_WEB_BASE_URL": "${user_config.base_url}",
+        "DEEPSEEK_WEB_DEFAULT_COUNT": "${user_config.default_count}",
+        "DEEPSEEK_WEB_MAX_SUMMARY_CHARS": "${user_config.max_summary_chars}",
+        "DEEPSEEK_WEB_RPS": "${user_config.requests_per_second}",
+        "DEEPSEEK_WEB_TIMEOUT_MS": "${user_config.timeout_ms}",
+        "DEEPSEEK_WEB_FETCH_MAX_CHARS": "${user_config.fetch_max_chars}"
+      },
+      "timeoutMs": 90000
+    }
+  }
+}

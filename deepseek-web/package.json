@@ -1,0 +1,15 @@
+{
+  "name": "zcode-deepseek-web",
+  "version": "0.1.2",
+  "description": "DeepSeek official web search and fetch as a ZCode plugin.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node scripts/smoke.mjs",
+    "test:live": "node scripts/smoke.mjs --live"
+  },
+  "author": "Drwho9726"
+}

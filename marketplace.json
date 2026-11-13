@@ -1,0 +1,21 @@
+{
+  "name": "dev-e-plugins",
+  "plugins": [
+    {
+      "name": "deepseek-web",
+      "source": "./deepseek-web",
+      "version": "0.1.2",
+      "description": "DeepSeek 官方联网搜索与网页抓取（Search & Fetch API），为 ZCode 优先提供高质量的 web_search 和 web_fetch；失败或无结果时可回退原生联网工具。",
+      "displayName": "DeepSeek 联网搜索",
+      "displayName_i18n": {
+        "zh-CN": "DeepSeek 联网搜索",
+        "en": "DeepSeek Web Search"
+      },
+      "description_i18n": {
+        "zh-CN": "DeepSeek 官方联网搜索与网页抓取（Search & Fetch API），为 ZCode 优先提供高质量的 web_search 和 web_fetch；失败或无结果时可回退原生联网工具。",
+        "en": "DeepSeek official web search and page fetching (Search & Fetch API) for ZCode, exposing high-quality web_search and web_fetch as preferred tools with fallback to native web tools."
+      },
+      "category": "productivity"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "name": "deepseek-web",
+  "version": "0.1.2",
+  "displayName": "DeepSeek 联网搜索",
+  "displayName_i18n": {
+    "zh-CN": "DeepSeek 联网搜索",
+    "en": "DeepSeek Web Search"
+  },
+  "description": "DeepSeek 官方联网搜索与网页抓取（Search & Fetch API），为 ZCode 优先提供高质量的 web_search 和 web_fetch；失败或无结果时可回退原生联网工具。",
+  "description_i18n": {
+    "zh-CN": "DeepSeek 官方联网搜索与网页抓取（Search & Fetch API），为 ZCode 优先提供高质量的 web_search 和 web_fetch；失败或无结果时可回退原生联网工具。",
+    "en": "DeepSeek official web search and page fetching (Search & Fetch API) for ZCode, exposing high-quality web_search and web_fetch as preferred tools with fallback to native web tools."
+  },
+  "author": {
+    "name": "Drwho9726"
+  },
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "web-search",
+    "fetch",
+    "crawl",
+    "mcp"
+  ],
+  "skills": "skills",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json",
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "DeepSeek API Key",
+      "description": "在 https://platform.deepseek.com/api_keys 创建。填写后会明文保存在 ZCode 的本地配置文件中；介意的话留空，改用 DEEPSEEK_API_KEY 环境变量。",
+      "default": ""
+    },
+    "base_url": {
+      "type": "string",
+      "title": "API Base URL",
+      "description": "DeepSeek Search & Fetch API 的基础地址。默认 https://api.deepseek.com/v1/tools，一般不需要修改。",
+      "default": "https://api.deepseek.com/v1/tools"
+    },
+    "default_count": {
+      "type": "number",
+      "title": "默认结果数",
+      "description": "每个查询返回的结果数，也是单次搜索合并后的默认上限。范围 1–50，默认 10。",
+      "default": 10
+    },
+    "max_summary_chars": {
+      "type": "number",
+      "title": "摘要最大字符数",
+      "description": "每条搜索结果返回给模型的 summary 上限。默认 800，范围 100–20000。",
+      "default": 800
+    },
+    "requests_per_second": {
+      "type": "number",
+      "title": "请求限速（QPS）",
+      "description": "本插件实例对 Search/Fetch 的每秒请求上限。默认 5，范围 1–20。",
+      "default": 5
+    },
+    "timeout_ms": {
+      "type": "number",
+      "title": "单次请求超时（毫秒）",
+      "description": "单次 Search 或 Fetch 请求的超时时间。默认 30000，范围 1000–120000。",
+      "default": 30000
+    },
+    "fetch_max_chars": {
+      "type": "number",
+      "title": "抓取正文最大字符数",
+      "description": "web_fetch 返回的 Markdown 正文上限。默认 200000，范围 1000–2000000。",
+      "default": 200000
+    }
+  }
+}

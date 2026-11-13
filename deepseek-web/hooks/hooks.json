@@ -1,0 +1,21 @@
+{
+  "description": "Inject DeepSeek web tool preference at session start.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear|compact|resume",
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": [
+              "${ZCODE_PLUGIN_ROOT}/hooks/session-start.mjs"
+            ],
+            "timeoutMs": 5000,
+            "statusMessage": "deepseek-web: loading web tool guidance…"
+          }
+        ]
+      }
+    ]
+  }
+}
